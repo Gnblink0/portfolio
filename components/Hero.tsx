@@ -4,6 +4,8 @@ import Typewriter from "./ui/type-animation";
 import GlowButton from "./glow-button";
 import GeneralButton from "./general-button";
 import MountainBackground from "./MountainBackground";
+import Moon from "./Moon";
+
 const sequence = [
   "I create things for web.",
   3000,
@@ -16,6 +18,7 @@ const Hero = () => {
   return (
     <div className="relative pb-20 h-[100vh] flex flex-col items-center justify-center">
       <StarBackground />
+      <Moon />
       <div className="h-8 md:h-10 lg:h-12">
         <Typewriter
           sequence={sequence}
@@ -40,7 +43,7 @@ const Hero = () => {
         </GeneralButton>
       </div>
 
-      <MountainBackground />
+      <MountainBackground/>
     </div>
   );
 };

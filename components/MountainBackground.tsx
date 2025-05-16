@@ -1,7 +1,7 @@
 // components/MountainBackground.tsx
 const MountainBackground = () => {
   return (
-    <div className="absolute bottom-0 w-full overflow-hidden">
+    <div className="absolute bottom-0 w-full -z-1 overflow-hidden">
       <svg className="w-full max-h-[100vh] h-auto" viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin slice">
         <g id="mountain-7">
           <path
