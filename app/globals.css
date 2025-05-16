@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+body {
+  @apply bg-gradient-to-b from-background-DEFAULT to-black;
+}
+
 @theme {
   --color-black-DEFAULT: #000000;
   --color-black-100: #000319;
+  --color-background-DEFAULT: #05080D;
 
 }
 
