@@ -1,24 +1,24 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+// import { motion, useScroll, useTransform } from "framer-motion";
 
 // components/MountainBackground.tsx
 const MountainBackground = () => {
-  const { scrollY } = useScroll();
+//   const { scrollY } = useScroll();
 
-  const y = useTransform(scrollY, [0, 500], [0, -1000]);
-  const zIndex = useTransform(scrollY, [0, 100], [-1, 2]);
-  const fillHeight = useTransform(scrollY, [0, 500], [0, 1500]);
-  const scale = useTransform(
-    scrollY, 
-    [0, 500],
-    [1, 2]
-);
+//   const y = useTransform(scrollY, [0, 500], [0, -1000]);
+//   const zIndex = useTransform(scrollY, [0, 100], [-1, 2]);
+//   const fillHeight = useTransform(scrollY, [0, 500], [0, 1500]);
+//   const scale = useTransform(
+//     scrollY, 
+//     [0, 500],
+//     [1, 2]
+// );
 
   return (
     <>
-      <motion.div
-        style={{ zIndex, y, scale}}
+      <div
+        // style={{ zIndex, y, scale}}
         className="absolute bottom-0 w-full -z-1 overflow-hidden"
       >
         <svg
@@ -57,12 +57,12 @@ const MountainBackground = () => {
             />
           </g>
         </svg>
-      </motion.div>
+      </div>
       {/* use a progressively higher background to fill in the gap, ensure the mountain and the background are articulated  */}
-      <motion.div
+      {/* <motion.div
         style={{ height: fillHeight }}
         className="absolute bottom-0 bg-background-DEFAULT w-full"
-      ></motion.div>
+      ></motion.div> */}
     </>
   );
 };

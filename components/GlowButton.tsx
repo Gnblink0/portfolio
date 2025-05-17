@@ -1,4 +1,4 @@
-import GeneralButton from "./general-button";
+import GeneralButton from "./GeneralButton";
 interface GlowButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -9,7 +9,7 @@ const GlowButton = ({ children, className, onClick }: GlowButtonProps) => {
   return (
     <GeneralButton
       onClick={onClick}
-      className={` bg-white text-black transition-all
+      className={` transition-all
         shadow-[0_0_20px_rgba(255,255,255,0.3)]
         hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]
         cursor-pointer ${className} `}
