@@ -29,4 +29,11 @@ export const techStacks: TechStack[] = [
     icon: `<svg>...</svg>`,
     category: "frontend",
   },
+  {
+    id: "javascript",
+    name: "JavaScript",
+    icon: `<svg>...</svg>`,
+    category: "frontend",
+  },
+  
 ];

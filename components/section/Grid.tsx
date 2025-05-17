@@ -1,62 +1,70 @@
-import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import {
+  BellIcon,
+  CalendarIcon,
+  FileTextIcon,
+  InputIcon,
+  KeyboardIcon,
+} from "@radix-ui/react-icons";
 import { IconCloudComponent } from "../IconCloud";
 
-export function Grid() {
-  return (
-    <div className="m-8 md:my-24">
-    <BentoGrid>
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={item.className}
-        />
-      ))}
-    </BentoGrid>
-    </div>
-  );
-}
-const Skeleton = () => (
-  <div
-    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2]
-      bg-dot-black/[0.2]
-      [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border
-      border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"
-  ></div>
-);
-const items = [
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+
+const features = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
+    Icon: FileTextIcon,
+    name: "Save your files",
+    description: "We automatically save your files as you type.",
+    href: "/",
+    cta: "Learn more",
+    background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "md:col-span-2",
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    className: "md:col-span-1 md:row-span-2",
-  },
-    {
-    title: "Tech Enthusiast",
-    description: "Dive into the transformative power of technology.",
-    header: <IconCloudComponent />,
+    Icon: InputIcon,
+    name: "Full text search",
+    description: "Search through all your files in one place.",
+    href: "/",
+    cta: "Learn more",
+    background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "md:col-span-1 md:row-span-2",
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
+    Icon: KeyboardIcon,
+    name: "Tech Enthusiast",
+  description: "I love to learn new things.",
+    href: "#tech-stack",
+    cta: "My Tech Stack",
+    background: (
+      <div className="absolute -right-5 -top-20 opacity-60">
+        <IconCloudComponent />
+      </div>
+    ),
+    className: "md:col-span-1 md:row-span-2",
+  },
+  {
+    Icon: CalendarIcon,
     className: "md:col-span-1",
   },
   {
-    title: "The Power of Communication",
+    Icon: BellIcon,
+    name: "Notifications",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
+      "Get notified when someone shares a file or mentions you in a comment.",
+    href: "/",
+    cta: "Learn more",
+    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    className: "md:col-span-2 md:row-span-1",
   },
 ];
+
+export function Grid() {
+  return (
+    <div className="m-4 md:my-24">
+      <BentoGrid className="relative">
+        {features.map((feature) => (
+          <BentoCard key={feature.name} {...feature} />
+        ))}
+      </BentoGrid>
+    </div>
+  );
+}
