@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-gradient-to-b from-background-DEFAULT to-black;
+  @apply bg-background-DEFAULT;
 }
 
 @theme {

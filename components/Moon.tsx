@@ -1,15 +1,25 @@
+"use client";
+
 import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const MoonFull: React.FC = () => {
+  const { scrollY } = useScroll();
+
+  // Transform scrollY (0 -> 500) to x position (0 -> 300) and y position (0 -> 200)
+  const x = useTransform(scrollY, [0, 500], [0, 800]);
+  const y = useTransform(scrollY, [0, 500], [0, 400]);
+
   return (
-    <div
-      className="absolute top-30 left-30 cursor-move transition-transform duration-300
-        ease-in-out handle"
+    <motion.div
+      style={{ x, y }}
+      className="absolute top-20 left-10 md:top-30 md:left-30 cursor-move transition-transform
+        duration-300 ease-in-out handle -z-10"
     >
       <svg
         viewBox="0 0 512 512"
-        className="h-[80px] w-[80px] drop-shadow-[0_0_20px_rgba(255,255,224,0.8)]"
-
+        className="h-[60px] w-[60px] md:h-[100px] md:w-[100px]
+          drop-shadow-[0_0_20px_rgba(255,255,224,0.8)]"
       >
         <g>
           <g>
@@ -58,7 +68,7 @@ const MoonFull: React.FC = () => {
           </g>
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

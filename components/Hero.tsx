@@ -16,7 +16,7 @@ const sequence = [
 ];
 const Hero = () => {
   return (
-    <div className="relative pb-20 h-[100vh] flex flex-col items-center justify-center">
+    <div className="relative h-[100vh] flex flex-col items-center justify-center">
       <StarBackground />
       <Moon />
       <div className="h-8 md:h-10 lg:h-12">
