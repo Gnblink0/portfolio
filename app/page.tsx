@@ -1,9 +1,9 @@
 import Hero from "@/components/section/Hero";
-import Grid from "@/components/Grid";
+import { Grid } from "@/components/section/Grid";
 import Navbar from "@/components/section/Header";
 import TechStack from "@/components/section/TechStack";
 import Project from "@/components/section/Project";
-import About from "@/components/section/About";
+import { Dock } from "@/components/Dock";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <div className="w-full">
         <Hero />
-        <About />
+        <Grid />
         <TechStack />
         <Project />
         <div className="h-3000 bg-pink-400">
@@ -23,8 +23,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      <Grid />
+      <Dock />
     </main>
   );
 }

@@ -21,6 +21,15 @@ html {
 @variant dark (&:where(.dark, .dark *));
 
 
+/* global text */
+@layer components {
+  .heading-responsive-size {
+    @apply text-2xl md:text-4xl lg:text-5xl;
+  }
+}
+
+/* animation */
+
 /* star twinkle animation */
 @keyframes twinkle {
   0% { opacity: 0.2; }

@@ -23,12 +23,12 @@ const Hero = () => {
         direction="up"
         className="pt-0 pb-5 flex-col flex justify-center items-center space-y-0"
       >
-              <div className="h-8 md:h-10 lg:h-12">
-        <Typewriter
-          sequence={sequence}
-          className="text-center font-bold text-2xl md:text-4xl lg:text-5xl"
-        />
-      </div>
+        <div className="h-8 md:h-10 lg:h-12">
+          <Typewriter
+            sequence={sequence}
+            className="text-center font-bold heading-responsive-size"
+          />
+        </div>
         <div
           className="mt-4 text-sm md:text-base lg:text-lg font-semibold flex items-center gap-2
             bg-linear-to-t from-gray-600 to-gray-100 text-transparent bg-clip-text"
@@ -37,17 +37,15 @@ const Hero = () => {
           <span>A full stack developer.</span>
         </div>
 
-
-      <div className="mt-8 flex items-center gap-8 md:gap-16">
-        <GlowButton className="bg-white text-black">Get in Touch</GlowButton>
-        <GlowButton className="border-1 text-white">
-          <a href="/Resume.pdf" target="_blank">
-            Resume
-          </a>
-        </GlowButton>
-      </div>
+        <div className="mt-8 flex items-center gap-8 md:gap-16">
+          <GlowButton className="bg-white text-black">Get in Touch</GlowButton>
+          <GlowButton className="border-1 text-white">
+            <a href="/Resume.pdf" target="_blank">
+              Resume
+            </a>
+          </GlowButton>
+        </div>
       </TextFade>
-
 
       <MountainBackground />
     </div>
