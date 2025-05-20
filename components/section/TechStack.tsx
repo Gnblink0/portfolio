@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
-import { techStacks, categoryDisplayNames } from "@/data";
+import { techStacks, categoryDisplayNames, type TechStack } from "@/data";
+import { motion } from "framer-motion";
 
 const TechStack = () => {
   // Group tech stacks by category
@@ -15,24 +17,78 @@ const TechStack = () => {
     {} as Record<string, typeof techStacks>,
   );
 
+
+  const renderIcon = (tech: TechStack) => {
+    if (tech.svg) {
+      return (
+        <div
+          className="w-12 h-12 text-white"
+          dangerouslySetInnerHTML={{ __html: tech.svg }}
+        />
+      );
+    }
+
+    if (tech.slug) {
+      if (tech.darkmode) {
+        return (
+          <img
+            src={`https://cdn.simpleicons.org/${tech.slug}/white`}
+            alt={tech.name}
+            className="w-12 h-12 object-contain"
+            loading="lazy"
+          />
+        );
+      }
+      return (
+        <img
+          src={`https://cdn.simpleicons.org/${tech.slug}/${tech.slug}`}
+          alt={tech.name}
+          className="w-12 h-12 object-contain"
+          loading="lazy"
+        />
+      );
+    }
+
+    return null;
+  };
+
+  const TechCard = ({ tech }: { tech: TechStack }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="group flex flex-col items-center justify-center p-4 rounded-lg bg-gray-900/50
+        hover:bg-gray-900/70 transition-all duration-300 hover:scale-105"
+    >
+      <div className="relative w-12 h-12 mb-3">{renderIcon(tech)}</div>
+      <span className="text-sm text-center text-gray-300 group-hover:text-white">
+        {tech.name}
+      </span>
+    </motion.div>
+  );
+
   return (
-    <div id="tech-stack">
-      <div className="flex flex-col items-center justify-center mb-4">
+    <div id="tech-stack" className="">
+      <div className="flex flex-col items-center justify-center mb-12">
         <p className="text-sm uppercase text-gray-500 mb-2">
           I constantly try to improve
         </p>
         <h2 className="heading-responsive-size font-bold">My Tech Stack</h2>
       </div>
 
-      <div>
+      <div className="space-y-12">
         {Object.entries(groupedTechStacks).map(([category, techs]) => (
-          <div key={category}>
-            <h3 className="text-3xl">{categoryDisplayNames[category as keyof typeof categoryDisplayNames]}</h3>
-            <div>
+          <div key={category} className="space-y-6">
+            <h3 className="text-2xl font-semibold">
+              {
+                categoryDisplayNames[
+                  category as keyof typeof categoryDisplayNames
+                ]
+              }
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {techs.map((tech) => (
-                <div key={tech.id}>
-                  <span>{tech.name}</span>
-                </div>
+                <TechCard key={tech.id} tech={tech} />
               ))}
             </div>
           </div>
