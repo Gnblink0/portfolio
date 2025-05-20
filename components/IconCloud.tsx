@@ -1,31 +1,10 @@
 import { IconCloud } from "@/components/ui/icon-cloud";
 
-const slugs = [
-  "typescript",
-  "javascript",
-  "java",
-  "react",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "vercel",
-  "jest",
-  "docker",
-  "git",
-  "github",
-  "visualstudiocode",
-  "figma",
-];
+import { techStacks } from "@/data";
 
 export function IconCloudComponent() {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  const images = techStacks.map(
+    (techStack) => `https://cdn.simpleicons.org/${techStack.slug}/white`,
   );
 
   return (

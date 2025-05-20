@@ -107,9 +107,9 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const z = Math.sin(phi) * r;
 
       newIcons.push({
-        x: x * 200,
-        y: y * 200,
-        z: z * 200,
+        x: x * 180,
+        y: y * 180,
+        z: z * 180,
         scale: 1,
         opacity: 1,
         id: i,

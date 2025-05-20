@@ -7,7 +7,7 @@ const MoonFull: React.FC = () => {
   const { scrollY } = useScroll();
 
   // Transform scrollY (0 -> 500) to x position (0 -> 300) and y position (0 -> 200)
-  const x = useTransform(scrollY, [0, 500], [0, 800]);
+  const x = useTransform(scrollY, [0, 500], [0, 1000]);
   const y = useTransform(scrollY, [0, 500], [0, 400]);
 
   return (
