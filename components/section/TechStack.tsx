@@ -17,7 +17,6 @@ const TechStack = () => {
     {} as Record<string, typeof techStacks>,
   );
 
-
   const renderIcon = (tech: TechStack) => {
     if (tech.svg) {
       return (
@@ -52,11 +51,27 @@ const TechStack = () => {
     return null;
   };
 
-  const TechCard = ({ tech }: { tech: TechStack }) => (
+  const fadeInAnimationVariants = {
+    initial: { opacity: 0, y: 50 },
+    animate: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const TechCard = ({ tech, index }: { tech: TechStack; index: number }) => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      key={tech.id}
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.3 }}
+      custom={index}
       className="group flex flex-col items-center justify-center p-4 rounded-lg bg-gray-900/50
         hover:bg-gray-900/70 transition-all duration-300 hover:scale-105"
     >
@@ -87,8 +102,8 @@ const TechStack = () => {
               }
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {techs.map((tech) => (
-                <TechCard key={tech.id} tech={tech} />
+              {techs.map((tech, index) => (
+                <TechCard key={tech.id} tech={tech} index={index} />
               ))}
             </div>
           </div>
