@@ -77,7 +77,7 @@ const features = [
 
 export function Grid() {
   return (
-    <div className="md:my-12">
+    <div className="">
       <BentoGrid className="relative">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />

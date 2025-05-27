@@ -161,6 +161,12 @@ const techStacks: TechStack[] = [
     category: "backend&database",
   },
   {
+    id: "graphql",
+    name: "GraphQL",
+    slug: "graphql",
+    category: "backend&database",
+  },
+  {
     id: "prisma",
     name: "Prisma",
     slug: "prisma",

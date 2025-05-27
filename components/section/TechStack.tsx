@@ -52,14 +52,17 @@ const TechStack = () => {
   };
 
   const fadeInAnimationVariants = {
-    initial: { opacity: 0, y: 50 },
+    initial: {
+      opacity: 0,
+      y: 30,
+    },
     animate: (index: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.05 * index,
+        delay: 0.1 * index,
         duration: 0.4,
-        ease: "easeOut",
+        ease: [0.215, 0.61, 0.355, 1.0], // use cubic-bezier
       },
     }),
   };
@@ -70,7 +73,10 @@ const TechStack = () => {
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{
+        once: true,
+        amount: 1.0,
+      }}
       custom={index}
       className="group flex flex-col items-center justify-center p-4 rounded-lg bg-gray-900/50
         hover:bg-gray-900/70 transition-all duration-300 hover:scale-105"
@@ -101,7 +107,7 @@ const TechStack = () => {
                 ]
               }
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
               {techs.map((tech, index) => (
                 <TechCard key={tech.id} tech={tech} index={index} />
               ))}

@@ -4,7 +4,7 @@ import TechStack from "@/components/section/TechStack";
 import Project from "@/components/section/Project";
 import { Dock } from "@/components/Dock";
 import About from "@/components/section/About";
-
+import Footer from "@/components/section/Footer";
 export default function Home() {
   return (
     <main
@@ -15,11 +15,12 @@ export default function Home() {
       <div className="w-full">
       <Hero />
       </div>
-      <div className="w-full max-w-screen-lg px-4">
+      <div className="flex flex-col items-center justify-center w-full max-w-screen-lg px-4 gap-24">
         <About />
         <TechStack />
         <Project />
       </div>
+      <Footer />
       <Dock />
     </main>
   );
