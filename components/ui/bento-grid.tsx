@@ -49,7 +49,7 @@ const BentoCard = ({
       `group relative col-span-3 flex flex-col justify-between overflow-hidden
       rounded-xl`,
       // dark styles
-      `transform-gpu dark:bg-gray-900/50`,
+      `transform-gpu bg-card`,
       className,
     )}
     {...props}
@@ -97,7 +97,7 @@ const BentoCard = ({
     )}
     <div
       className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300
-        group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10"
+      group-hover:bg-neutral-800/10"
     />
   </div>
 );

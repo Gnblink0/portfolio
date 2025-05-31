@@ -1,3 +1,12 @@
+const links = [
+  {
+    id: "blog",
+    name: "Blog",
+    url: "https://en.gnblink.com/posts/git-workflow/",
+  },
+  
+];
+
 const projects = [
   {
     id: 1,
@@ -5,9 +14,20 @@ const projects = [
     time: "Mar 2025 - Present",
     description: "Description of Project 1",
     image: "",
-    codeLink: "",
+    codeLink: "https://github.com/the-tomato-king/Tomatch",
     liveLink: "",
-    techStack: ["React", "TypeScript", "Tailwind CSS"],
+    techStack: ["React Native", "TypeScript", "Firebase", "Expo"],
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+  },
+  {
+    id: 2,
+    name: "Portfolio",
+    time: "May 2025 - Present",
+    description: "My personal portfolio website built with React, TypeScript, and Tailwind CSS.",
+    image: "",
+    codeLink: "https://github.com/Gnblink0/portfolio",
+    liveLink: "",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     features: ["Feature 1", "Feature 2", "Feature 3"],
   },
 ];
@@ -274,4 +294,4 @@ const categoryDisplayNames: Record<TechStack["category"], string> = {
   "devops&tools": "DevOps & Tools",
 };
 
-export { projects, hobbies, techStacks, categoryDisplayNames, type TechStack };
+export { links, projects, hobbies, techStacks, categoryDisplayNames, type TechStack };

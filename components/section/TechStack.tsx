@@ -78,8 +78,8 @@ const TechStack = () => {
         amount: 1.0,
       }}
       custom={index}
-      className="group flex flex-col items-center justify-center p-4 rounded-lg bg-gray-900/50
-        hover:bg-gray-900/70 transition-all duration-300 hover:scale-105"
+      className="group flex flex-col items-center justify-center p-4 rounded-lg bg-card
+        transition-all duration-300 hover:scale-105"
     >
       <div className="relative w-12 h-12 mb-3">{renderIcon(tech)}</div>
       <span className="text-sm text-center text-gray-300 group-hover:text-white">

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { links } from "@/data";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,8 +16,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` z-100 fixed left-0 right-0 mx-auto flex justify-center  h-10
-        md:h-16 rounded-md md:rounded-2xl bg-[#050e24] backdrop-blur-md
+      className={` z-100 fixed left-0 right-0 mx-auto flex justify-center h-10 md:h-16 rounded-md
+        md:rounded-2xl bg-[#050e24] backdrop-blur-md
         shadow-[0_0_30px_rgba(73,160,255,0.15)] border border-[#233554]/30
         transition-all duration-300 hover:shadow-[0_0_40px_rgba(73,160,255,0.2)]
         hover:border-[#233554]/40
@@ -38,7 +39,10 @@ const Navbar = () => {
         >
           Work
         </a>
-        <a href="#" className="text-gray-300 hover:text-white cursor-pointer">
+        <a
+          href={links.find((link) => link.id === "blog")?.url || "#"}
+          className="text-gray-300 hover:text-white cursor-pointer"
+        >
           Blog
         </a>
         <a href="#" className="text-gray-300 hover:text-white cursor-pointer">

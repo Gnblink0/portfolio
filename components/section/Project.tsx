@@ -1,5 +1,6 @@
 import React from 'react'
 import { projects } from '@/data'
+import ProjectCard from '../ProjectCard'
 
 const Project = () => {
   return (
@@ -10,10 +11,7 @@ const Project = () => {
       </div>
       <div>
         {projects.map((project) => (
-          <div key={project.id}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-          </div>
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </div>
