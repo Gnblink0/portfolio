@@ -13,7 +13,7 @@ const projects = [
     name: "Tomatch",
     time: "Mar 2025 - Present",
     description: "Description of Project 1",
-    image: "",
+    image: "/project/tomatch.png",
     codeLink: "https://github.com/the-tomato-king/Tomatch",
     liveLink: "",
     techStack: ["React Native", "TypeScript", "Firebase", "Expo"],
@@ -119,7 +119,7 @@ const techStacks: TechStack[] = [
   {
     id: "css",
     name: "CSS",
-    slug: "css3",
+    slug: "css",
     category: "web",
   },
   {

@@ -36,6 +36,9 @@ const TechStack = () => {
             alt={tech.name}
             className="w-12 h-12 object-contain"
             loading="lazy"
+            width={48}
+            height={48}
+            unoptimized
           />
         );
       }
@@ -45,6 +48,8 @@ const TechStack = () => {
           alt={tech.name}
           className="w-12 h-12 object-contain"
           loading="lazy"
+          width={48}
+          height={48}
         />
       );
     }
