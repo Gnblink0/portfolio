@@ -2,6 +2,7 @@
 import React from "react";
 import { techStacks, categoryDisplayNames, type TechStack } from "@/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const TechStack = () => {
   // Group tech stacks by category
@@ -30,7 +31,7 @@ const TechStack = () => {
     if (tech.slug) {
       if (tech.darkmode) {
         return (
-          <img
+          <Image
             src={`https://cdn.simpleicons.org/${tech.slug}/white`}
             alt={tech.name}
             className="w-12 h-12 object-contain"
@@ -39,7 +40,7 @@ const TechStack = () => {
         );
       }
       return (
-        <img
+        <Image
           src={`https://cdn.simpleicons.org/${tech.slug}/${tech.slug}`}
           alt={tech.name}
           className="w-12 h-12 object-contain"
