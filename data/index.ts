@@ -129,9 +129,9 @@ const techStacks: TechStack[] = [
     category: "web",
   },
   {
-    id: "express",
-    name: "Express",
-    slug: "express",
+    id: "nextjs",
+    name: "Next.js",
+    slug: "nextdotjs",
     category: "web",
     darkmode: true,
   },
@@ -179,6 +179,13 @@ const techStacks: TechStack[] = [
     name: "Node.js",
     slug: "nodedotjs",
     category: "backend&database",
+  },
+    {
+    id: "express",
+    name: "Express.js",
+    slug: "express",
+    category: "backend&database",
+    darkmode: true,
   },
   {
     id: "graphql",
@@ -285,6 +292,13 @@ const techStacks: TechStack[] = [
     slug: "figma",
     category: "devops&tools",
   },
+  {
+    id: "postman",
+    name: "Postman",
+    slug: "postman",
+    category: "devops&tools",
+  },
+  
 ];
 
 const categoryDisplayNames: Record<TechStack["category"], string> = {

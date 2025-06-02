@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { projects } from "@/data";
-import GlowButton from "./GlowButton";
+import { Button } from "./ui/button";
 
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
   return (
@@ -35,20 +35,20 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
       {/* Project Links */}
       <div className="flex gap-4">
         {project.codeLink && (
-          <GlowButton
+          <Button
             onClick={() => window.open(project.codeLink, "_blank")}
             className="px-4 py-2 text-sm"
           >
             View Code
-          </GlowButton>
+          </Button>
         )}
         {project.liveLink && (
-          <GlowButton
+          <Button
             onClick={() => window.open(project.liveLink, "_blank")}
             className="px-4 py-2 text-sm"
           >
             Live Demo
-          </GlowButton>
+          </Button>
         )}
       </div>
     </div>
