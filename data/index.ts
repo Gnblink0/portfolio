@@ -4,7 +4,35 @@ const links = [
     name: "Blog",
     url: "https://en.gnblink.com/posts/git-workflow/",
   },
-  
+];
+
+const socialLinks = [
+  {
+    id: "github",
+    name: "GitHub",
+    url: "https://github.com/Gnblink0",
+    icon: "github",
+  },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/gina-shiyu-xu",
+    icon: "linkedin",
+  },
+  {
+    id: "email",
+    name: "Email",
+    url: "mailto:Gnblink44@gmail.com",
+    icon: "mail",
+  },
+];
+
+const navLinks = [
+  { name: "Home", href: "#" },
+  { name: "About", href: "#about" },
+  { name: "Work", href: "#work" },
+  { name: "Tech Stack", href: "#tech-stack" },
+  { name: "Blog", href: "https://en.gnblink.com/posts/git-workflow/" },
 ];
 
 const projects = [
@@ -308,4 +336,4 @@ const categoryDisplayNames: Record<TechStack["category"], string> = {
   "devops&tools": "DevOps & Tools",
 };
 
-export { links, projects, hobbies, techStacks, categoryDisplayNames, type TechStack };
+export { links, socialLinks, navLinks, projects, hobbies, techStacks, categoryDisplayNames, type TechStack };

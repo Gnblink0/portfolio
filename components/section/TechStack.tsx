@@ -95,8 +95,8 @@ const TechStack = () => {
   );
 
   return (
-    <div id="tech-stack" className="">
-      <div className="flex flex-col items-center justify-center mb-12">
+    <div id="tech-stack" className="w-full">
+      <div className="flex flex-col items-center justify-center mb-16">
         <p className="text-sm uppercase text-gray-500 mb-2">
           I constantly try to improve
         </p>

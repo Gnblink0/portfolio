@@ -34,14 +34,16 @@ const Hero = () => {
             bg-linear-to-t from-gray-600 to-gray-100 text-transparent bg-clip-text"
         >
           <span>Hi, I&apos;m Gina.</span>
-          <span>A full stack developer.</span>
+          <span>A creator & builder.</span>
         </div>
 
         <div className="mt-8 flex items-center gap-8 md:gap-16">
-          <GlowButton className="bg-white text-black">Get in Touch</GlowButton>
+          <GlowButton className="bg-white text-black">
+            <a href="#work">View My Work</a>
+          </GlowButton>
           <GlowButton className="border-1 text-white">
-            <a href="/Resume.pdf" target="_blank">
-              Resume
+            <a href="https://en.gnblink.com" target="_blank" rel="noopener noreferrer">
+              My Blog
             </a>
           </GlowButton>
         </div>

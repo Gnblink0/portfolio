@@ -40,12 +40,10 @@ export function Dock() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
-      <FloatingDock
-        desktopClassName="fixed bottom-0 right-0"
-        mobileClassName="fixed bottom-[3%] right-[3%]"
-        items={links}
-      />
-    </div>
+    <FloatingDock
+      desktopClassName="fixed bottom-0 right-0"
+      mobileClassName="fixed bottom-[3%] right-[3%]"
+      items={links}
+    />
   );
 }
