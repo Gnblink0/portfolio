@@ -85,7 +85,8 @@ const TechStack = () => {
       }}
       custom={index}
       className="group flex flex-col items-center justify-center p-4 rounded-lg bg-card
-        transition-all duration-300 hover:scale-105"
+        border border-border-light transition-all duration-300 hover:scale-105
+        hover:shadow-[0_0_15px_rgba(180,200,140,0.15)]"
     >
       <div className="relative w-12 h-12 mb-3">{renderIcon(tech)}</div>
       <span className="text-sm text-center text-gray-300 group-hover:text-white">
@@ -100,7 +101,7 @@ const TechStack = () => {
         <p className="text-sm uppercase text-gray-500 mb-2">
           I constantly try to improve
         </p>
-        <h2 className="heading-responsive-size font-bold">My Tech Stack</h2>
+        <h2 className="heading-responsive-size font-bold moonlit-heading">My Tech Stack</h2>
       </div>
 
       <div className="space-y-12">

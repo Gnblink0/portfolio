@@ -8,7 +8,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
     <div
       className="group relative rounded-xl bg-card border border-border-light p-6 transition-all
         duration-300 hover:scale-[1.02] hover:border-border-hover hover:glow-sm
-        backdrop-blur-sm"
+        hover:shadow-[0_0_20px_rgba(180,200,140,0.12)] backdrop-blur-sm"
     >
       {/* Project Header */}
       <div className="mb-4">

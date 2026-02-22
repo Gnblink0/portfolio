@@ -9,7 +9,7 @@ const Project = () => {
         <p className="text-sm uppercase text-gray-500 mb-2">
           Things I&apos;ve Built
         </p>
-        <h2 className="heading-responsive-size font-bold">My Creations</h2>
+        <h2 className="heading-responsive-size font-bold moonlit-heading">My Creations</h2>
       </div>
       <div className="space-y-8">
         {projects.map((project) => (

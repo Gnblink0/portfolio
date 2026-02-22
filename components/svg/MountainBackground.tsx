@@ -22,7 +22,7 @@ const MountainBackground = () => {
         className="absolute bottom-0 w-full -z-1 overflow-hidden"
       >
         <svg
-          className="w-full max-h-[60vh] h-auto"
+          className="w-full max-h-[80vh] h-auto"
           viewBox="0 400 1000 600"
           preserveAspectRatio="xMinYMin slice"
         >

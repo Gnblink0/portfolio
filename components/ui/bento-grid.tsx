@@ -52,7 +52,7 @@ const BentoCard = ({
       rounded-xl`,
       contentTop ? "justify-start" : "justify-between",
       // dark styles
-      `transform-gpu bg-card`,
+      `transform-gpu bg-card border border-border-light`,
       className,
     )}
     {...props}

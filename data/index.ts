@@ -38,25 +38,64 @@ const navLinks = [
 const projects = [
   {
     id: 1,
-    name: "Tomatch",
-    time: "Mar 2025 - Present",
-    description: "Description of Project 1",
-    image: "/project/tomatch.png",
-    codeLink: "https://github.com/the-tomato-king/Tomatch",
+    name: "Mastodon Archive Viewer",
+    time: "Dec 2025 – Jan 2026",
+    description:
+      "Client-side web app for parsing, exploring, and persistently storing Mastodon data archives. Features a zero-backend, offline-first data pipeline using @zip.js to extract 20,000+ interactions directly in-browser, with Dexie.js (IndexedDB) for persistent client-side storage ensuring strict data privacy. Optimized with @tanstack/react-virtual for 60fps infinite scrolling across 15,000+ posts, interactive Recharts dashboards, Fuse.js full-text search delivering sub-100ms retrieval, multi-account merge, and optional Google Drive OAuth for secure cloud backups.",
+    image: "",
+    codeLink: "",
     liveLink: "",
-    techStack: ["React Native", "TypeScript", "Firebase", "Expo"],
-    features: ["Feature 1", "Feature 2", "Feature 3"],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Dexie.js",
+      "Tailwind CSS",
+      "Fuse.js",
+    ],
+    features: [
+      "Zero-backend offline-first architecture with in-browser zip extraction",
+      "60fps infinite scrolling with time-indexed anchor navigation",
+      "Full-text search across 15,000+ records in sub-100ms",
+    ],
   },
   {
     id: 2,
+    name: "Tomatch",
+    time: "Apr 2025 – Jun 2025",
+    description:
+      "AI-powered mobile app for grocery price tracking and trend analysis. Built with React Native and Expo, featuring high-performance interactive charts for price trend visualization and FlashList for strict 60fps rendering. Architected a hybrid receipt parsing pipeline combining on-device OCR and lightweight LLMs for structured JSON extraction, with vector search normalizing grocery items into a unified catalog at 98%+ accuracy. Streamlined CI/CD via Expo Application Services with OTA updates, accelerating bug-fix rollouts by over 50%.",
+    image: "/project/tomatch.png",
+    codeLink: "https://github.com/the-tomato-king/Tomatch",
+    liveLink: "",
+    techStack: [
+      "React Native",
+      "TypeScript",
+      "Firebase",
+      "Expo",
+      "LLMs",
+    ],
+    features: [
+      "Hybrid OCR + LLM receipt parsing pipeline",
+      "Vector search for grocery item normalization at 98%+ accuracy",
+      "OTA updates via EAS for 50%+ faster bug-fix rollouts",
+    ],
+  },
+  {
+    id: 3,
     name: "Portfolio",
-    time: "May 2025 - Present",
-    description: "My personal portfolio website built with React, TypeScript, and Tailwind CSS.",
+    time: "May 2025 – Present",
+    description:
+      "My personal portfolio website with a night owl forest theme, interactive globe, firefly animations, and bento grid layout.",
     image: "",
     codeLink: "https://github.com/Gnblink0/portfolio",
     liveLink: "",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    features: ["Feature 1", "Feature 2", "Feature 3"],
+    features: [
+      "Night owl dark forest atmospheric design",
+      "Interactive 3D globe with Vancouver marker",
+      "Responsive bento grid layout with animations",
+    ],
   },
 ];
 

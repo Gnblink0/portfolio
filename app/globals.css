@@ -14,7 +14,7 @@ html {
 
 @theme {
   /* background color */
-  --color-background-DEFAULT: #05080D;  /* darkest background color */
+  --color-background-DEFAULT: #00060f;  /* matches forest bottom color */
   --color-background-card: #0E1320;     /* card background color */
   
   /* text color */
@@ -25,6 +25,7 @@ html {
   /* border and shadow */
   --color-border-light: rgba(255, 255, 255, 0.1);  /* default border */
   --color-border-hover: rgba(255, 255, 255, 0.2);  /* hover border */
+  --color-glow: rgba(180, 200, 140, 0.25);           /* warm forest glow */
 }
 
 /* dark mode */
@@ -48,6 +49,14 @@ html {
   .glow-lg {
     box-shadow: 0 0 30px var(--color-glow);
   }
+
+  .ambient-glow {
+    background: radial-gradient(ellipse at 50% 0%, rgba(200, 220, 255, 0.025) 0%, transparent 60%);
+  }
+
+  .moonlit-heading {
+    text-shadow: 0 0 30px rgba(200, 220, 255, 0.15), 0 0 60px rgba(200, 220, 255, 0.05);
+  }
 }
 
 
@@ -65,5 +74,33 @@ html {
 
   100% {
     opacity: 0.2;
+  }
+}
+
+/* firefly animations */
+@keyframes firefly-float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(-5px, -25px);
+  }
+  75% {
+    transform: translate(-15px, -10px);
+  }
+}
+
+@keyframes firefly-glow {
+  0%, 100% {
+    opacity: 0;
+  }
+  15%, 85% {
+    opacity: 0;
+  }
+  40%, 60% {
+    opacity: 1;
   }
 }
