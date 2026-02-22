@@ -17,6 +17,7 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   description?: string;
   href?: string;
   cta?: string;
+  contentTop?: boolean;
 }
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
@@ -41,13 +42,15 @@ const BentoCard = ({
   description,
   href,
   cta,
+  contentTop,
   ...props
 }: BentoCardProps) => (
   <div
     key={name}
     className={cn(
-      `group relative col-span-3 flex flex-col justify-between overflow-hidden
+      `group relative col-span-3 flex flex-col overflow-hidden
       rounded-xl`,
+      contentTop ? "justify-start" : "justify-between",
       // dark styles
       `transform-gpu bg-card`,
       className,
@@ -56,8 +59,12 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div
-      className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all
-        duration-300 group-hover:-translate-y-10"
+      className={cn(
+        "pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300",
+        contentTop
+          ? "order-first group-hover:translate-y-0"
+          : "group-hover:-translate-y-10",
+      )}
     >
       {Icon && (
         <Icon
@@ -77,9 +84,12 @@ const BentoCard = ({
     {name !== "Lover of Many Things" && name !== "contact" && (
       <div
         className={cn(
-          `pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu
+          `pointer-events-none absolute flex w-full transform-gpu
           flex-row items-center p-4 opacity-0 transition-all duration-300
-          group-hover:translate-y-0 group-hover:opacity-100`,
+          group-hover:opacity-100`,
+          contentTop
+            ? "top-0 -translate-y-10 group-hover:translate-y-0"
+            : "bottom-0 translate-y-10 group-hover:translate-y-0",
         )}
       >
         <Button

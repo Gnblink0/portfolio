@@ -2,6 +2,7 @@
 
 import { KeyboardIcon } from "@radix-ui/react-icons";
 import { IconCloudComponent } from "../IconCloud";
+import Globe from "../Globe";
 import { Copy } from "lucide-react";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -21,9 +22,12 @@ const features = [
   {
     name: "Based in Vancouver",
     description: "I'm currently based in Vancouver, Canada.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    contentTop: true,
+    background: (
+      <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 h-[320px] w-[320px] md:h-[400px] md:w-[400px]">
+        <Globe />
+      </div>
+    ),
     className: "md:col-span-1 md:row-span-2",
   },
   {
