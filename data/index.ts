@@ -31,7 +31,7 @@ const navLinks = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
   { name: "Work", href: "#work" },
-  { name: "Tech Stack", href: "#tech-stack" },
+  { name: "Experience", href: "#experience" },
   { name: "Blog", href: "https://en.gnblink.com/posts/git-workflow/" },
 ];
 
@@ -43,8 +43,8 @@ const projects = [
     description:
       "Client-side web app for parsing, exploring, and persistently storing Mastodon data archives. Features a zero-backend, offline-first data pipeline using @zip.js to extract 20,000+ interactions directly in-browser, with Dexie.js (IndexedDB) for persistent client-side storage ensuring strict data privacy. Optimized with @tanstack/react-virtual for 60fps infinite scrolling across 15,000+ posts, interactive Recharts dashboards, Fuse.js full-text search delivering sub-100ms retrieval, multi-account merge, and optional Google Drive OAuth for secure cloud backups.",
     image: "",
-    codeLink: "",
-    liveLink: "",
+    codeLink: "https://github.com/Gnblink0/MastodonArchiveProject",
+    liveLink: "https://mastodon-archive-project.vercel.app/",
     techStack: [
       "React",
       "TypeScript",
@@ -67,7 +67,7 @@ const projects = [
       "AI-powered mobile app for grocery price tracking and trend analysis. Built with React Native and Expo, featuring high-performance interactive charts for price trend visualization and FlashList for strict 60fps rendering. Architected a hybrid receipt parsing pipeline combining on-device OCR and lightweight LLMs for structured JSON extraction, with vector search normalizing grocery items into a unified catalog at 98%+ accuracy. Streamlined CI/CD via Expo Application Services with OTA updates, accelerating bug-fix rollouts by over 50%.",
     image: "/project/tomatch.png",
     codeLink: "https://github.com/the-tomato-king/Tomatch",
-    liveLink: "",
+    liveLink: "https://youtu.be/jimTBzkOlb8",
     techStack: [
       "React Native",
       "TypeScript",
@@ -89,7 +89,7 @@ const projects = [
       "My personal portfolio website with a night owl forest theme, interactive globe, firefly animations, and bento grid layout.",
     image: "",
     codeLink: "https://github.com/Gnblink0/portfolio",
-    liveLink: "",
+    liveLink: "https://me.gnblink.com/",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     features: [
       "Night owl dark forest atmospheric design",
@@ -119,6 +119,55 @@ const hobbies = [
     id: 4,
     name: "Gaming",
     emoji: "🎮",
+  },
+];
+
+interface WorkExperience {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  bullets: string[];
+}
+
+const workExperiences: WorkExperience[] = [
+  {
+    id: 1,
+    title: "Software Developer",
+    company: "Ours TCF",
+    location: "Vancouver, BC",
+    period: "Nov 2025 – Present",
+    bullets: [
+      "Spearheaded a cross-functional team to develop and launch a profitable commercial language platform with 3,000+ dynamic questions, architecting a decoupled storage solution using Supabase for structured data and Cloudflare R2 for media assets.",
+      "Engineered an LLM-powered vocabulary system via OpenRouter API with instant translations cached to the database to reduce costs, combined with an Ebbinghaus spaced repetition algorithm to drive personalized learning and user retention.",
+      "Architected scalable relational schemas and secured user data via Supabase Auth and Row Level Security (RLS), while establishing frontend technical standards to deliver a responsive, mobile-first UX with optimized skeleton loading states.",
+      "Integrated Stripe for automated subscription billing, successfully bringing the product to profitability with 100+ active users and driving a robust 20% free-to-paid conversion rate via high-value analytics and premium mock exams.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Mobile Development Teaching Assistant",
+    company: "Northeastern University",
+    location: "Vancouver, BC",
+    period: "Sep 2025 – Dec 2025",
+    bullets: [
+      "Mentored a cohort of 50+ graduate students in cross-platform mobile architecture, conducting code reviews to debug complex React Native state management, Flexbox layouts, and navigation routing to accelerate assignment deliveries.",
+      "Evaluated and provided technical feedback on 200+ mobile application assignments, enforcing industry-standard clean code practices, Git version control, and optimal component rendering strategies to elevate codebase quality.",
+      "Facilitated full-stack integration workflows, troubleshooting advanced technical blockers related to Firebase Authentication, RESTful HTTP requests, and native device APIs (Camera, GPS) to elevate students' final project architectures.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Software Developer Intern",
+    company: "SuoGoGo",
+    location: "Burnaby, BC",
+    period: "May 2025 – Sep 2025",
+    bullets: [
+      "Collaborated within a 10+ member agile team to build a B2B logistics portal using React, TypeScript, Jira, and Git successfully delivering the MVP beta version that supported the onboarding of 20+ initial logistics partners.",
+      "Integrated 15+ complex RESTful APIs to securely synchronize multi-tenant shipping data, proactively managing network latency by implementing robust error boundaries and skeleton loaders that decreased perceived page load time by ~30%.",
+      "Translated Figma prototypes into responsive web interfaces utilizing Tailwind CSS, establishing a centralized library of 20+ reusable UI components that reduced codebase duplication and accelerated frontend development speed by ~40%.",
+    ],
   },
 ];
 
@@ -375,4 +424,4 @@ const categoryDisplayNames: Record<TechStack["category"], string> = {
   "devops&tools": "DevOps & Tools",
 };
 
-export { links, socialLinks, navLinks, projects, hobbies, techStacks, categoryDisplayNames, type TechStack };
+export { links, socialLinks, navLinks, projects, hobbies, techStacks, categoryDisplayNames, workExperiences, type TechStack, type WorkExperience };

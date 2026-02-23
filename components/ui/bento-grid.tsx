@@ -57,7 +57,7 @@ const BentoCard = ({
     )}
     {...props}
   >
-    <div>{background}</div>
+    <div className={cn(!href && !cta && !description && "flex-1")}>{background}</div>
     <div
       className={cn(
         "pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300",
@@ -81,7 +81,7 @@ const BentoCard = ({
       <p className="max-w-lg text-neutral-400">{description}</p>
     </div>
 
-    {name !== "Lover of Many Things" && name !== "contact" && (
+    {href && cta && (
       <div
         className={cn(
           `pointer-events-none absolute flex w-full transform-gpu

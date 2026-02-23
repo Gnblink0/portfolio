@@ -1,6 +1,6 @@
 import Hero from "@/components/section/Hero";
 import Navbar from "@/components/section/Header";
-import TechStack from "@/components/section/TechStack";
+import Experience from "@/components/section/Experience";
 import Project from "@/components/section/Project";
 import About from "@/components/section/About";
 import Footer from "@/components/section/Footer";
@@ -36,7 +36,7 @@ export default function Home() {
           </section>
 
           <section className="py-12 md:py-16">
-            <TechStack />
+            <Experience />
           </section>
 
           <section className="py-12 md:py-16 pb-16 md:pb-20 lg:pb-24">

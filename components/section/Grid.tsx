@@ -4,6 +4,7 @@ import { KeyboardIcon } from "@radix-ui/react-icons";
 import { IconCloudComponent } from "../IconCloud";
 import Globe from "../Globe";
 import { Copy } from "lucide-react";
+import Image from "next/image";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { hobbies } from "@/data";
@@ -47,10 +48,18 @@ const features = [
     name: "contact",
     className: "md:col-span-1",
     background: (
-      <div className="mt-16 flex flex-col items-center justify-center">
-        <p className="text-center text-3xl font-bold">Say Hi! 👋</p>
+      <div className="relative h-full flex flex-col items-center px-4">
+        {/* Memoji peeking from top-left corner */}
+        <Image
+          src="/memoji.png"
+          alt="Gina's Memoji"
+          width={130}
+          height={130}
+          className="absolute -top-8 -left-3 pointer-events-none"
+        />
+        <p className="text-3xl font-bold mt-auto">Say Hi!</p>
         <ConfettiButton
-          className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-3xl
+          className="mt-3 mb-auto inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-3xl
             bg-white text-black transition-all
             shadow-[0_0_20px_rgba(255,255,255,0.3)]
             hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"

@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
             onClick={() => window.open(project.liveLink, "_blank")}
             className="px-4 py-2 text-sm"
           >
-            Live Demo
+            {project.liveLink.includes("youtu") ? "Demo Video" : "Live Demo"}
           </Button>
         )}
       </div>
